@@ -63,7 +63,7 @@
 			    <div class="container">
 				    <div class="row">
 					    <div class="col-xs-2">
-						    <div id="colorlib-logo"><a href="index.html">Stuff</a></div>
+						    <div id="colorlib-logo"><a href="index.html">Scribble</a></div>
 					    </div>
 					    <div class="col-xs-10 text-right menu-1">
 						    <ul>
@@ -87,9 +87,14 @@
 			    </div>
 		    </div>
 	    </nav>
+        
+		<div id="colorlib-container">
+			<div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
 
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
         
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="container">

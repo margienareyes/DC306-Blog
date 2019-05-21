@@ -148,6 +148,7 @@
     <Content Include="images\img_bg_4.jpg" />
     <Content Include="images\loader.gif" />
     <Content Include="images\loc.png" />
+    <Content Include="images\logo.png" />
     <Content Include="images\person1.jpg" />
     <Content Include="images\person2.jpg" />
     <Content Include="images\person3.jpg" />
@@ -164,6 +165,7 @@
     <Content Include="js\modernizr-2.6.2.min.js" />
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\respond.min.js" />
+    <Content Include="Login.aspx" />
     <Content Include="vendor\animsition\animsition.min.css" />
     <Content Include="vendor\animsition\animsition.min.js" />
     <Content Include="vendor\bootstrap-4.1\bootstrap.min.css" />
@@ -315,6 +317,13 @@
     </Compile>
     <Compile Include="DashboardAuthorView.aspx.designer.cs">
       <DependentUpon>DashboardAuthorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="default.aspx.cs">
