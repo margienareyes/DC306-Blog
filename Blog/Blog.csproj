@@ -67,10 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Blog.mdf" />
     <Content Include="BlogArticleList.aspx" />
     <Content Include="BlogArticleView.aspx" />
     <Content Include="BlogAuthorList.aspx" />
     <Content Include="BlogAuthorView.aspx" />
+    <Content Include="Blog_log.ldf">
+      <DependentUpon>Blog.mdf</DependentUpon>
+    </Content>
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flexslider.css" />
