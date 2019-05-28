@@ -62,7 +62,7 @@
                 <div class="card-body">
                     <div action="" method="post" novalidate="novalidate">
                         <div class="mb-2">
-                            <asp:Button runat="server" Text="Save" ID="buttonSave" CssClass="btn btn-success btn-block" ></asp:Button>
+                            <asp:Button runat="server" Text="Save" ID="buttonSave" CssClass="btn btn-success btn-block" OnClick="buttonSave_Click"></asp:Button>
                         </div>
                         <div class="mb-2">
                             <asp:Button runat="server" Text="Delete" ID="buttonDelete" CssClass="btn btn-outline-danger btn-block"></asp:Button>

@@ -25,8 +25,8 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand = new SqlCommand("INSERT INTO " +
-                "Article (Title) " +
-                "VALUES (@Title)",
+                "Article (Title, FK_AuthorArticle) " +
+                "VALUES (@Title, @FK_AuthorArticle)",
                 this.SqlConnection);
 
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
@@ -46,5 +46,6 @@ namespace Blog
 
             this.SqlConnection.Close();
         }
+
     }
 }
