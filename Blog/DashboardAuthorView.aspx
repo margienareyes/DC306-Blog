@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form action="" method="post" novalidate="novalidate">
                         <div class="form-group">
-                            <asp:Label runat="server" Text="Label" ID="labelStatus"></asp:Label>
+                            <asp:Label runat="server" Text="" ID="labelStatus"></asp:Label>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Username</label>
