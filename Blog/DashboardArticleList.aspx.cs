@@ -13,5 +13,10 @@ namespace Blog
         {
 
         }
+
+        protected void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

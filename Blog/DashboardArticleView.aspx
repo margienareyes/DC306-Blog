@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="DashboardArticleList.aspx.cs" Inherits="Blog.DashboardArticleList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="DashboardArticleView.aspx.cs" Inherits="Blog.DashboardArticleView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -8,8 +8,11 @@
                 <div class="card-body">
                     <form action="" method="post" novalidate="novalidate">
                         <div class="form-group">
+                            <asp:Label runat="server" Text="Label" ID="labelStatus"></asp:Label>
+                        </div>
+                        <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Title</label>
-                            <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+                            <asp:TextBox runat="server" ID="textboxTitle" class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group has-success">
                             <label for="cc-name" class="control-label mb-1">Name on card</label>
@@ -57,18 +60,14 @@
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
-                    <form action="" method="post" novalidate="novalidate">
+                    <div action="" method="post" novalidate="novalidate">
                         <div class="mb-2">
-                            <button id="payment-button" type="submit" class="btn btn-success btn-block">
-                                <span id="payment-button-amount">Save</span>
-                            </button>
+                            <asp:Button runat="server" Text="Save" ID="buttonSave" CssClass="btn btn-success btn-block" OnClick="buttonSave_Click"></asp:Button>
                         </div>
-                        <div>
-                            <button id="payment-button" type="submit" class="btn btn-outline-danger btn-block">
-                                <span id="payment-button-amount">Delete</span>
-                            </button>
+                        <div class="mb-2">
+                            <asp:Button runat="server" Text="Delete" ID="buttonDelete" CssClass="btn btn-outline-danger btn-block"></asp:Button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
