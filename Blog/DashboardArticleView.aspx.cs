@@ -25,11 +25,13 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand = new SqlCommand("INSERT INTO " +
-                "Article (Title, FK_AuthorArticle) " +
-                "VALUES (@Title, @FK_AuthorArticle)",
+                "Article (Title) " +
+                "VALUES (@Title)",
                 this.SqlConnection);
 
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
+            // SqlCommand.Parameters.AddWithValue("@FK_AuthorArticle", 1);
+
 
             try
             {
