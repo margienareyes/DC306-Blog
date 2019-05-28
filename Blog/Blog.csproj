@@ -248,7 +248,7 @@
     <Content Include="vendor\vector-map\jqvmap.min.css" />
     <Content Include="vendor\wow\animate.css" />
     <Content Include="vendor\wow\wow.min.js" />
-    <Content Include="Web.config" />
+    <None Include="Web.config" />
     <Content Include="default.aspx" />
   </ItemGroup>
   <ItemGroup>
