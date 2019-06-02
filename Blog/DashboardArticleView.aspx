@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="DashboardArticleView.aspx.cs" Inherits="Blog.DashboardArticleView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  <link rel="stylesheet" type="text/css" href="css/trix.css">
+  <script type="text/javascript" src="js/trix.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -13,6 +15,11 @@
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Title</label>
                             <asp:TextBox runat="server" ID="textboxTitle" class="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            
+  <input id="x" type="hidden" name="content">
+  <trix-editor input="x"></trix-editor>
                         </div>
                         <div class="form-group has-success">
                             <label for="cc-name" class="control-label mb-1">Name on card</label>
@@ -72,5 +79,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Initialize Quill editor -->
+    <script>
+      var editor = new Quill('#editor', {
+        modules: { toolbar: '#toolbar' },
+        theme: 'snow'
+      });
+    </script>
 </asp:Content>
 
