@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Configuration;
+using System.Web;
 
 namespace Blog
 {
@@ -17,27 +18,24 @@ namespace Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Request.QueryString["parameter1"];
             this.SqlConnection = new SqlConnection(this.connectionString);
 
         }
 
         protected void buttonSave_Click(object sender, EventArgs e)
         {
-            SqlCommand SqlCommand = new SqlCommand("INSERT INTO " +
-                "Article (Title) " +
-                "VALUES (@Title)",
+            SqlCommand SqlCommand = new SqlCommand("" +
+                "INSERT INTO Article (Title, Content) VALUES (@Title, @Content);",
                 this.SqlConnection);
 
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
+            SqlCommand.Parameters.AddWithValue("@Content", this.textboxContent.Text);
 
+            this.SqlConnection.Open();
             try
             {
-                this.SqlConnection.Open();
-                if (SqlCommand.ExecuteNonQuery() == 1)
-                {
-                    this.labelStatus.Text = "New user is successfully added! Thank you.";
-                }
+                int x = SqlCommand.ExecuteNonQuery();
+                this.labelStatus.Text = x.ToString();
             }
             catch (Exception exception)
             {

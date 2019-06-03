@@ -8,8 +8,9 @@ trix-editor {
   border-radius: 3px;
   margin: 0;
   padding: 0.4em 0.6em;
-  min-height: 5em;
-  outline: none; }
+  min-height: 30em;
+}
+trix-tool}
 trix-toolbar * {
   box-sizing: border-box; }
 trix-toolbar .trix-button-row {
