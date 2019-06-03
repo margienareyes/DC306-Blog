@@ -47,14 +47,15 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form id="form1" runat="server">
                                 <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    <asp:TextBox ID="txtEmail" Cssclass="au-input au-input--full" type="email" name="email" placeholder="Email" runat="server">Email Address
+                                    </asp:TextBox>
                                 </div>
-                                <div class="form-group">
+                                    &nbsp;<div class="form-group">
                                     <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                     <asp:TextBox ID="txtPassword" Cssclass="au-input au-input--full" type="password" name="password" placeholder="Password"  runat="server">
+                                     </asp:TextBox>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
@@ -64,7 +65,7 @@
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                <asp:Button ID="btnLogin" Text="Login" CssClass="au-btn au-btn--block au-btn--green m-b-20" runat="server" OnClick="btnLogin_Click" />
                             </form>
                             <div class="register-link">
                                 <p>
