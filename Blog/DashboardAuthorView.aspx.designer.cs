@@ -22,13 +22,49 @@ namespace Blog {
         protected global::System.Web.UI.WebControls.Label labelStatus;
         
         /// <summary>
-        /// textboxTitle control.
+        /// textboxUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textboxTitle;
+        protected global::System.Web.UI.WebControls.TextBox textboxUsername;
+        
+        /// <summary>
+        /// textboxPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxPassword;
+        
+        /// <summary>
+        /// textboxName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxName;
+        
+        /// <summary>
+        /// textboxDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxDescription;
+        
+        /// <summary>
+        /// textboxEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxEmail;
         
         /// <summary>
         /// buttonSave control.
@@ -38,14 +74,5 @@ namespace Blog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonSave;
-        
-        /// <summary>
-        /// buttonDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonDelete;
     }
 }
