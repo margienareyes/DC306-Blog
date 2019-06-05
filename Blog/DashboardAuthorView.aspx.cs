@@ -20,11 +20,6 @@ namespace Blog
 
         }
 
-        protected void buttonSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btn1_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection(connStr);
@@ -33,13 +28,20 @@ namespace Blog
             cmd.Parameters.AddWithValue("@Username", txtUser.Text);
             cmd.Parameters.AddWithValue("@Password", txtPass.Text);
             cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-  
+
             conn.Open();
             try
             {
                 cmd.ExecuteNonQuery();
 
                 labelStatus.Text = "Thank you for registering ! ";
+
+                txtName.Text = "";
+                txtUser.Text = "";
+                txtEmail.Text = "";
+                txtPass.Text = "";
+                txtLastName.Text ="";
+
             }
             catch (Exception exc)
 
