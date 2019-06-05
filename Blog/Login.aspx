@@ -49,12 +49,12 @@
                         <div class="login-form">
                             <form id="form1" runat="server">
                                 <div class="form-group">
-                                    <asp:TextBox ID="txtEmail" Cssclass="au-input au-input--full" type="email" name="email" placeholder="Email" runat="server">
+                                    <asp:TextBox ID="txtUsername" Cssclass="au-input au-input--full" name="Username" placeholder="Username" runat="server" required>
                                     </asp:TextBox>
                                 </div>
                                     &nbsp;<div class="form-group">
                                     <label>Password</label>
-                                     <asp:TextBox ID="txtPassword" Cssclass="au-input au-input--full" type="password" name="password" placeholder="Password"  runat="server">
+                                     <asp:TextBox ID="txtPassword" Cssclass="au-input au-input--full" type="password" name="password" placeholder="Password"  runat="server" required>
                                      </asp:TextBox>
                                 </div>
                                 <div class="login-checkbox">
@@ -65,7 +65,7 @@
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div>
-                                <asp:Button ID="btnLogin" Text="Login" CssClass="au-btn au-btn--block au-btn--green m-b-20" runat="server" OnClick="btnLogin_Click" />
+                                <asp:Button ID="btnLogin" Text="Login" CssClass="au-btn au-btn--block au-btn--green m-b-20" runat="server" OnClick="btnLogin_Click"/>
                             </form>
                             <div class="register-link">
                                 <p>

@@ -22,7 +22,7 @@ namespace Blog
         { 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
         con.Open();
-            string query = "SELECT * FROM Author where email='" + txtEmail.Text + "'and Password='" + txtPassword.Text + "'";
+            string query = "SELECT * FROM Author where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
         SqlCommand cmd = new SqlCommand(query, con);
 
@@ -30,7 +30,7 @@ namespace Blog
 
             if (output != "")
             {
-                Session["user"] = txtEmail.Text;
+                Session["user"] = txtUsername.Text;
                 Response.Redirect("DashboardAuthorView.aspx");
             }
             else
