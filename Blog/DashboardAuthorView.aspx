@@ -8,23 +8,23 @@
                 <div class="card-body">
                     <form action="" method="post" novalidate="novalidate">
                         <div class="form-group">
-                            <asp:Label runat="server" Text="" ID="labelStatus"></asp:Label>
+                            <asp:Label runat="server" ID="labelStatus" ForeColor="Red"></asp:Label>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Username</label>
-                            <asp:TextBox runat="server" ID="txtUser" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtUser" class="form-control" required></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Password</label>
-                            <asp:TextBox runat="server" ID="txtPass" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtPass"  class="form-control" required></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Email</label>
-                            <asp:TextBox runat="server" ID="txtEmail" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtEmail" class="form-control" required></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Name</label>
-                            <asp:TextBox runat="server" ID="txtName" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtName" class="form-control" required></asp:TextBox>
                         </div>
                       </form>
                 </div>
