@@ -49,7 +49,7 @@
                         <div class="login-form">
                             <form id="form1" runat="server">
                                 <div class="form-group">
-                                    <asp:TextBox ID="txtEmail" Cssclass="au-input au-input--full" type="email" name="email" placeholder="Email" runat="server">Email Address
+                                    <asp:TextBox ID="txtEmail" Cssclass="au-input au-input--full" type="email" name="email" placeholder="Email" runat="server">
                                     </asp:TextBox>
                                 </div>
                                     &nbsp;<div class="form-group">

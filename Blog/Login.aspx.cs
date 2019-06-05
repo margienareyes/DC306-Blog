@@ -20,7 +20,7 @@ namespace Blog
 
         protected void btnLogin_Click(object sender, EventArgs e)
         { 
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["blogdb"].ToString());
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
         con.Open();
             string query = "SELECT * FROM Author where email='" + txtEmail.Text + "'and Password='" + txtPassword.Text + "'";
 
