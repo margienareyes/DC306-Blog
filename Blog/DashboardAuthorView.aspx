@@ -37,15 +37,38 @@
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Password
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPass" runat="server" ErrorMessage="*Password Required" ControlToValidate="txtPass" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorPass" runat="server" ErrorMessage="*Password Required" ControlToValidate="txtPass" ForeColor="Red"></asp:RequiredFieldValidator>
                             </label>
                             &nbsp;<asp:TextBox runat="server" ID="txtPass" TextMode="Password"  class="form-control" ></asp:TextBox>
                             </div>
                             <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Confirm Password&nbsp;&nbsp;&nbsp; 
                                 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConPass" ErrorMessage="*Password Mismatch" ForeColor="Red"></asp:CompareValidator>
-                                </label>
-                            <asp:TextBox runat="server" ID="txtConPass" TextMode="Password"  class="form-control"></asp:TextBox>
+                            </label>
+
+                            <asp:TextBox runat="server" ID="txtConPass" TextMode="password"  class="form-control"></asp:TextBox>
+                            
+                                <br />
+
+                            <input id="cbShowHidePassword" type="checkbox" onclick="ShowHidePassword();" /> <span>Show Password</span>
+
+                                <script type="text/javascript">
+                                    function ShowHidePassword() {
+                                        var txt = $('#<%=txtPass.ClientID%>');
+                                        var txt2 = $('#<%=txtConPass.ClientID%>');
+                                        if (txt.prop("type") == "password" && txt2.prop("type") == "password") {
+                                            txt.prop("type", "text");
+                                            txt2.prop("type", "text");
+                                            $("label[for='cbShowHidePassword']").text();
+                                        }
+                                        else {
+                                            txt.prop("type", "password");
+                                            txt2.prop("type", "password");
+                                            $("label[for='cbShowHidePassword']").text();
+                                        }
+                                    }
+                                </script>
+
                             </div>                   
                         </form>
                 </div>
