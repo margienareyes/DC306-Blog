@@ -12,26 +12,21 @@
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Username</label>
-                            <asp:TextBox runat="server" ID="textboxUsername" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtUser" class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Password</label>
-                            <asp:TextBox runat="server" ID="textboxPassword" class="form-control"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Name</label>
-                            <asp:TextBox runat="server" ID="textboxName" class="form-control"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Description</label>
-                            <asp:TextBox runat="server" ID="textboxDescription" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtPass" class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Email</label>
-                            <asp:TextBox runat="server" ID="textboxEmail" class="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtEmail" class="form-control"></asp:TextBox>
                         </div>
-                        
-                    </form>
+                        <div class="form-group">
+                            <label for="cc-payment" class="control-label mb-1">Name</label>
+                            <asp:TextBox runat="server" ID="txtName" class="form-control"></asp:TextBox>
+                        </div>
+                      </form>
                 </div>
             </div>
         </div>
@@ -40,7 +35,7 @@
                 <div class="card-body">
                     <div action="" method="post" novalidate="novalidate">
                         <div class="mb-2">
-                            <asp:Button runat="server" Text="Register" ID="buttonSave" CssClass="btn btn-success btn-block"></asp:Button>
+                            <asp:Button runat="server" Text="Register" ID="btn1" CssClass="btn btn-success btn-block" OnClick="btn1_Click"></asp:Button>
                         </div>
                     </div>
                 </div>
