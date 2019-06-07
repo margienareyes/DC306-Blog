@@ -22,12 +22,7 @@
                             </label>
                             &nbsp;<asp:TextBox runat="server" ID="txtLastName" class="form-control" Width="200px"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Email<asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="*Email Required" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
                         
-                            </label>
-                            &nbsp;<asp:TextBox runat="server" ID="txtEmail" class="form-control"></asp:TextBox>
-                        </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Username</label>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidatorUser" runat="server" ErrorMessage="*Username Required" ControlToValidate="txtUser" ForeColor="Red"></asp:RequiredFieldValidator>

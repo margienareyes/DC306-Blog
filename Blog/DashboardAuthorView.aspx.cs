@@ -41,11 +41,12 @@ namespace Blog
             else
             {
                 conn = new SqlConnection(connStr);
-                cmd = new SqlCommand("insert into [Author] (Name, Username, Password, Email) values (@Name,@Username,@Password,@Email)", conn);
+                cmd = new SqlCommand("insert into [Author] (Name, LastName, Username, Password) values (@Name, @LastName,@Username,@Password)", conn);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                
 
                 conn.Open();
                 try
@@ -55,7 +56,7 @@ namespace Blog
                     Label1.Text = "";
                     txtName.Text = "";
                     txtUser.Text = "";
-                    txtEmail.Text = "";
+                   
                     txtPass.Text = "";
                     txtLastName.Text = "";
                 }
