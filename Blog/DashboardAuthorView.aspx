@@ -9,7 +9,7 @@
                     <form action="" method="post" novalidate="novalidate">
                         <div class="form-group">
                             <asp:Label runat="server" ID="labelStatus" ForeColor="Red"></asp:Label>
-                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                         </div>
                           <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Firstname<asp:RequiredFieldValidator ID="RequiredFieldValidatorFirstname" runat="server" ErrorMessage="*Firstname Required" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>

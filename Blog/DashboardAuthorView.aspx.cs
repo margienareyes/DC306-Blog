@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Configuration;
+using System.Configuration;
 
 namespace Blog
 {
@@ -22,36 +23,57 @@ namespace Blog
 
         protected void btn1_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(connStr);
-            cmd = new SqlCommand("insert into [Author] (Name, Username, Password, Email) values (@Name,@Username,@Password,@Email)", conn);
-            cmd.Parameters.AddWithValue("@Name", txtName.Text);
-            cmd.Parameters.AddWithValue("@Username", txtUser.Text);
-            cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-            cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-
-            conn.Open();
-            try
-            {
-                cmd.ExecuteNonQuery();
-
-                labelStatus.Text = "Thank you for registering ! ";
-
-                txtName.Text = "";
-                txtUser.Text = "";
-                txtEmail.Text = "";
-                txtPass.Text = "";
-                txtLastName.Text ="";
-
-            }
-            catch (Exception exc)
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["Blog"].ToString();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from [Author] where Username=@txtUser";
+            cmd.Parameters.AddWithValue("txtUser", txtUser.Text);
+            cmd.Connection = con;
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.HasRows)
 
             {
-                labelStatus.Text = exc.ToString();
+                Label1.Visible = true;
+                Label1.Text = "Username already exist";
+                labelStatus.Text = "";
             }
+            else
+            {
+                conn = new SqlConnection(connStr);
+                cmd = new SqlCommand("insert into [Author] (Name, Username, Password, Email) values (@Name,@Username,@Password,@Email)", conn);
+                cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                cmd.Parameters.AddWithValue("@Username", txtUser.Text);
+                cmd.Parameters.AddWithValue("@Password", txtPass.Text);
+                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
 
-
-            conn.Close();
+                conn.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    labelStatus.Text = "Thank you for registering ! ";
+                    Label1.Text = "";
+                    txtName.Text = "";
+                    txtUser.Text = "";
+                    txtEmail.Text = "";
+                    txtPass.Text = "";
+                    txtLastName.Text = "";
+                }
+                catch (Exception exc)
+                {
+                    labelStatus.Text = exc.ToString();
+                }
+                conn.Close();
+            }
         }
     }
 }
+               
+
+
+
+
+
+
+
 
