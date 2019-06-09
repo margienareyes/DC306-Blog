@@ -49,7 +49,7 @@ namespace Blog
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    labelStatus.Text = "Thank you for registering ! ";
+                    labelStatus.Text = "Thank you! You are now registered ";
                     Label1.Text = "";
                     txtName.Text = "";
                     txtUser.Text = "";
