@@ -67,27 +67,21 @@
 					    </div>
 					    <div class="col-xs-10 text-right menu-1">
 						    <ul>
-							    <li class="active"><a href="index.html">Home</a></li>
-							    <li class="has-dropdown">
-								    <a href="blog.html">Blog</a>
-								    <ul class="dropdown">
-									    <li><a href="single.html">Blog Single</a></li>
-									    <li><a href="#">Video</a></li>
-									    <li><a href="#">Read</a></li>
-									    <li><a href="#">Lifestyle</a></li>
-								    </ul>
-							    </li>
-							    <li><a href="event.html">Event</a></li>
-							    <li><a href="travel.html">Travel</a></li>
-							    <li><a href="about.html">About Me</a></li>
-							    <li><a href="contact.html">Contact</a></li>
+							    <li><a href="/">HOME</a></li>
+								<li><a href="BlogAuthorView.aspx">AUTHORS</a></li>
+                                <li><a href="BlogArticleList.aspx">ARTICLE</a></li>
+                                <li><a href="Login.aspx">LOGIN</a></li>
+                                <li><a href="register.aspx">REGISTER</a></li>
 						    </ul>
 					    </div>
 				    </div>
 			    </div>
 		    </div>
 	    </nav>
+							   
+                                
         
+                                
         <asp:ContentPlaceHolder ID="Header" runat="server">
         </asp:ContentPlaceHolder>
 
@@ -106,13 +100,11 @@
 						<h2>Navigational</h2>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> Home</a></li>
-								<li><a href="#"><i class="icon-check"></i> About Me</a></li>
-								<li><a href="#"><i class="icon-check"></i> Blog</a></li>
-								<li><a href="#"><i class="icon-check"></i> Travel</a></li>
-								<li><a href="#"><i class="icon-check"></i> Lifestyle</a></li>
-								<li><a href="#"><i class="icon-check"></i> Fashion</a></li>
-								<li><a href="#"><i class="icon-check"></i> Health</a></li>
+								<li><a href="/">HOME</a></li>
+								<li><a href="BlogAuthorView.aspx">AUTHORS</a></li>
+                                <li><a href="BlogArticleList.aspx">ARTICLE</a></li>
+                                <li><a href="Login.aspx">LOGIN</a></li>
+                                <li><a href="register.aspx">REGISTER</a></li>
 							</ul>
 						</p>
 					</div>

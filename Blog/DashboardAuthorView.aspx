@@ -12,15 +12,17 @@
                             <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                         </div>
                           <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Firstname<asp:RequiredFieldValidator ID="RequiredFieldValidatorFirstname" runat="server" ErrorMessage="*Firstname Required" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <label for="cc-payment" class="control-label mb-1">Name<asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="*Name Required" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
                         
                             </label>
                             &nbsp;<asp:TextBox runat="server" ID="txtName" class="form-control" Width="200px"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <label for="cc-payment" class="control-label mb-1">Lastname<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Lastname Required" ControlToValidate="txtLastName" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </label>
-                            &nbsp;<asp:TextBox runat="server" ID="txtLastName" class="form-control" Width="200px"></asp:TextBox>
+                         <div class="form-group">
+                            <label for="cc-payment" class="control-label mb-1">Email</label>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="*Email Required" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                        
+                        &nbsp;<asp:TextBox runat="server" ID="txtEmail" class="form-control"></asp:TextBox>
+                        
                         </div>
                         
                         <div class="form-group">
