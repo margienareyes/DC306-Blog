@@ -112,37 +112,25 @@
       <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-            <li class="has-sub">
-              <a class="js-arrow" href="/assets/#">
-                <i class="fas fa-tachometer-alt"></i>Home</a>
-              <ul class="list-unstyled navbar__sub-list js-sub-list">
-          <ul class="list-unstyled navbar__list">
-            <li class="has-sub">
-              <a class="js-arrow" href="/assets/#">
-                <i class="fas fa-tachometer-alt"></i>Article</a>
-              <ul class="list-unstyled navbar__sub-list js-sub-list">
-                <li>
-                  <a href="/assets/index.html">All Article</a>
+                <li >
+                    <a href="/dashboard/index.aspx"><i class="fas fa-home"></i>Home</a>
                 </li>
-                <li>
-                  <a href="/assets/index2.html">New Article</a>
-                </li>
-              </ul>
+                <li class="has-sub">
+                    <a class="js-arrow" href="#"><i class="fas fa-folder-open"></i>Article</a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li><a href="/dashboard/articles.aspx">All Article</a></li>
+                        <li><a href="/dashboard/article.aspx">New Article</a></li>
+                    </ul>
 
-            </li>
-              <li class="has-sub">
-              <a class="js-arrow" href="/assets/#">
-                <i class="fas fa-tachometer-alt"></i>Author</a>
-              <ul class="list-unstyled navbar__sub-list js-sub-list">
-                <li>
-                  <a href="/assets/index.html">All Author</a>
                 </li>
-                <li>
-                  <a href="/assets/index2.html">New Author</a>
+                <li class="has-sub">
+                    <a class="js-arrow"  href="#"><i class="fas fa-users"></i>Author</a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li><a href="/dashboard/authors.aspx">All Author</a></li>
+                        <li><a href="/dashboard/author.aspx">New Author</a></li>
+                    </ul>
                 </li>
-              </ul>
-            </li>
-          </ul>
+            </ul>
         </nav>
       </div>
     </aside>
