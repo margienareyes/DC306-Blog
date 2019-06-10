@@ -32,7 +32,6 @@ namespace Blog
             cmd.Connection = con;
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.HasRows)
-
             {
                 Label1.Visible = true;
                 Label1.Text = "Username already exist";
@@ -41,24 +40,22 @@ namespace Blog
             else
             {
                 conn = new SqlConnection(connStr);
-                cmd = new SqlCommand("insert into [Author] (Name, LastName, Username, Password) values (@Name, @LastName,@Username,@Password)", conn);
+                cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password) values (@Name,@Email,@Username,@Password)", conn);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
-                cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
+                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-                
-
                 conn.Open();
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    labelStatus.Text = "Thank you for registering ! ";
+                    labelStatus.Text = "Thank you! You are now registered ";
                     Label1.Text = "";
                     txtName.Text = "";
                     txtUser.Text = "";
-                   
+                    txtEmail.Text = "";
                     txtPass.Text = "";
-                    txtLastName.Text = "";
+
                 }
                 catch (Exception exc)
                 {
@@ -69,9 +66,6 @@ namespace Blog
         }
     }
 }
-               
-
-
 
 
 
