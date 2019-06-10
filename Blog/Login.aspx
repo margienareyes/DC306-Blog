@@ -49,6 +49,7 @@
                         <div class="login-form">
                             <form id="form1" runat="server">
                                 <div class="form-group">
+                                    <label>Username</label>
                                     <asp:TextBox ID="txtUsername" Cssclass="au-input au-input--full" name="Username" placeholder="Username" runat="server" required>
                                     </asp:TextBox>
                                 </div>
