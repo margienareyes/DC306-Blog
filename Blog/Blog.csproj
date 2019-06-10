@@ -87,6 +87,7 @@
     <Content Include="DashboardArticleView.aspx" />
     <Content Include="DashboardAuthorList.aspx" />
     <Content Include="DashboardAuthorView.aspx" />
+    <Content Include="DashboardWelcome.aspx" />
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\poppins\poppins-v5-latin-100.svg" />
@@ -319,6 +320,13 @@
     </Compile>
     <Compile Include="DashboardAuthorView.aspx.designer.cs">
       <DependentUpon>DashboardAuthorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardWelcome.aspx.cs">
+      <DependentUpon>DashboardWelcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardWelcome.aspx.designer.cs">
+      <DependentUpon>DashboardWelcome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
