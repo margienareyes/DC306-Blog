@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Configuration;
-using System.Web;
+using System.IO;
 
 namespace Blog
 {
@@ -25,17 +25,31 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand = new SqlCommand("" +
-                "INSERT INTO Article (Title, Content) VALUES (@Title, @Content);",
+                "INSERT INTO Article (Title, Content, ImagePath) VALUES (@Title, @Content, @ImagePath);",
                 this.SqlConnection);
+
+            string filename = fileUploadImage.FileName;
+            string path = Server.MapPath("public/");
 
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
             SqlCommand.Parameters.AddWithValue("@Content", this.textboxContent.Text);
-
+            SqlCommand.Parameters.AddWithValue("@ImagePath", "~/public/" + filename);
+            
             this.SqlConnection.Open();
             try
             {
-                int x = SqlCommand.ExecuteNonQuery();
-                this.labelStatus.Text = x.ToString();
+                if (SqlCommand.ExecuteNonQuery() == 1)
+                {
+                    if (fileUploadImage.HasFile) {
+                        string ext = Path.GetExtension(filename);
+                        if (ext == ".jpg" || ext == ".png")
+                        {
+                            fileUploadImage.PostedFile.SaveAs(path + filename);
+                            this.labelStatus.Text = "Article saved succesfully";
+                            this.clearForm();
+                        }
+                    }
+                }
             }
             catch (Exception exception)
             {
@@ -43,6 +57,12 @@ namespace Blog
             }
 
             this.SqlConnection.Close();
+        }
+
+        protected void clearForm()
+        {
+            this.textboxTitle.Text = "";
+            this.textboxContent.Text = "";
         }
     }
 }
