@@ -6,7 +6,7 @@
     <aside id="colorlib-hero">
 	    <div class="flexslider">
 		    <ul class="slides">
-		    <li style="background-image: url(images/img_bg_1.jpg);">
+		    <li style="background-image: url(/assets/images/img_bg_1.jpg);">
 			    <div class="overlay"></div>
 			    <div class="container">
 			   	    <div class="row">
@@ -25,7 +25,7 @@
 				    </div>
 			    </div>
 		    </li>
-		    <li style="background-image: url(images/img_bg_2.jpg);">
+		    <li style="background-image: url(/assets/images/img_bg_2.jpg);">
 			    <div class="overlay"></div>
 			    <div class="container">
 			   	    <div class="row">
@@ -44,7 +44,7 @@
 				    </div>
 			    </div>
 		    </li>
-		    <li style="background-image: url(images/img_bg_3.jpg);">
+		    <li style="background-image: url(/assets/images/img_bg_3.jpg);">
 			    <div class="overlay"></div>
 			    <div class="container">
 			   	    <div class="row">
@@ -63,7 +63,7 @@
 				    </div>
 			    </div>
 		    </li>
-		    <li style="background-image: url(images/img_bg_4.jpg);">
+		    <li style="background-image: url(/assets/images/img_bg_4.jpg);">
 			    <div class="overlay"></div>
 			    <div class="container">
 			   	    <div class="row">
@@ -199,7 +199,7 @@
 				<div class="col-md-8">
 					<div class="blog-entry">
 						<div class="blog-img">
-							<div class="video colorlib-video" style="background-image: url(images/blog-8.jpg);">
+							<div class="video colorlib-video" style="background-image: url(/assets/images/blog-8.jpg);">
 								<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-play"></i></a>
 								<div class="overlay"></div>
 							</div>

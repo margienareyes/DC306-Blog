@@ -94,7 +94,7 @@
 			<div class="col-md-12">
 				<div class="blog-entry">
 					<div class="blog-img">
-						<div class="video colorlib-video" style="background-image: url(images/blog-8.jpg);">
+						<div class="video colorlib-video" style="background-image: url(/assets/images/blog-8.jpg);">
 							<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-play"></i></a>
 							<div class="overlay"></div>
 						</div>

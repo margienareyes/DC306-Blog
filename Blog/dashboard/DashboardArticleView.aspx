@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" ValidateRequest="false" Language="C#" MasterPageFile="./Dashboard.Master" AutoEventWireup="true" CodeBehind="DashboardArticleView.aspx.cs" Inherits="Blog.DashboardArticleView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <link rel="stylesheet" type="text/css" href="/css/trix.css">
-  <script type="text/javascript" src="/js/trix.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/css/trix.css">
+  <script type="text/javascript" src="/assets//js/trix.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">

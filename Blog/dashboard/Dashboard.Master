@@ -14,26 +14,26 @@
     <title>Dashboard 2</title>
 
     <!-- Fontfaces CSS-->
-    <link href="/css/font-face.css" rel="stylesheet" media="all">
-    <link href="/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/assets/css/font-face.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-    <link href="/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="/assets/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="/css/theme.css" rel="stylesheet" media="all">
+    <link href="/assets/css/theme.css" rel="stylesheet" media="all">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -45,8 +45,8 @@
       <div class="header-mobile__bar">
         <div class="container-fluid">
           <div class="header-mobile-inner">
-            <a class="logo" href="/index.html">
-              <img src="images/icon/logo.png" alt="CoolAdmin" />
+            <a class="logo" href="/assets/index.html">
+              <img src="/assets/images/icon/logo.png" alt="CoolAdmin" />
             </a>
             <button class="hamburger hamburger--slider" type="button">
               <span class="hamburger-box">
@@ -60,37 +60,37 @@
         <div class="container-fluid">
           <ul class="navbar-mobile__list list-unstyled">
             <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/dashboard.aspx">
                 <i class="fas fa-tachometer-alt"></i>Article</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="/index.html">All Article</a>
+                  <a href="/assets/index.html">All Article</a>
                 </li>
                 <li>
-                  <a href="/index2.html">New Article</a>
+                  <a href="/assets/index2.html">New Article</a>
                 </li>
                
               </ul>
             </li>
             <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/assets/#">
                 <i class="fas fa-tachometer-alt"></i>Authors</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="/index.html">All Author</a>
+                  <a href="/assets/index.html">All Author</a>
                 </li>
                 <li>
-                  <a href="/index2.html">New Author</a>
+                  <a href="/assets/index2.html">New Author</a>
                 </li>
                    <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/assets/#">
                 <i class="fas fa-tachometer-alt"></i>Account</a>
               <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                 <li>
-                  <a href="/index.html">Register</a>
+                  <a href="/assets/index.html">Register</a>
                 </li>
                 <li>
-                  <a href="/index2.html">Login</a>
+                  <a href="/assets/index2.html">Login</a>
                 </li>
               </ul>
             </li>
@@ -105,40 +105,40 @@
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
       <div class="logo">
-        <a href="/#">
-          <img src="images/logo.png" alt="Cool Admin" />
+        <a href="/assets/#">
+          <img src="/assets/images/logo.png" alt="Cool Admin" />
         </a>
       </div>
       <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
             <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/assets/#">
                 <i class="fas fa-tachometer-alt"></i>Home</a>
               <ul class="list-unstyled navbar__sub-list js-sub-list">
           <ul class="list-unstyled navbar__list">
             <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/assets/#">
                 <i class="fas fa-tachometer-alt"></i>Article</a>
               <ul class="list-unstyled navbar__sub-list js-sub-list">
                 <li>
-                  <a href="/index.html">All Article</a>
+                  <a href="/assets/index.html">All Article</a>
                 </li>
                 <li>
-                  <a href="/index2.html">New Article</a>
+                  <a href="/assets/index2.html">New Article</a>
                 </li>
               </ul>
 
             </li>
               <li class="has-sub">
-              <a class="js-arrow" href="/#">
+              <a class="js-arrow" href="/assets/#">
                 <i class="fas fa-tachometer-alt"></i>Author</a>
               <ul class="list-unstyled navbar__sub-list js-sub-list">
                 <li>
-                  <a href="/index.html">All Author</a>
+                  <a href="/assets/index.html">All Author</a>
                 </li>
                 <li>
-                  <a href="/index2.html">New Author</a>
+                  <a href="/assets/index2.html">New Author</a>
                 </li>
               </ul>
             </li>
@@ -163,33 +163,33 @@
                 <div class="account-wrap">
                   <div class="account-item clearfix js-item-menu">
                     <div class="image">
-                      <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                      <img src="/assets/images/icon/avatar-01.jpg" alt="John Doe" />
                     </div>
                     <div class="content">
-                      <a class="js-acc-btn" href="/#"><%#MyString%><</a>
+                      <a class="js-acc-btn" href="/assets/#"><%#MyString%></a>
                     </div>
                     <div class="account-dropdown js-dropdown">
                       <div class="info clearfix">
                         <div class="image">
-                          <a href="/#">
-                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                          <a href="/assets/#">
+                            <img src="/assets/images/icon/avatar-01.jpg" alt="John Doe" />
                           </a>
                         </div>
                         <div class="content">
                           <h5 class="name">
-                            <a href="/#"><%#MyString%><</a>
+                            <a href="/assets/#"><%# MyString%></a>
                           </h5>
                           <span class="email">johndoe@example.com</span>
                         </div>
                       </div>
                       <div class="account-dropdown__body">
                         <div class="account-dropdown__item">
-                          <a href="/#">
+                          <a href="/assets/#">
                             <i class="zmdi zmdi-account"></i>Account</a>
                         </div>
                       
                       <div class="account-dropdown__footer">
-                        <a href="/#">
+                        <a href="/assets/#">
                           <i class="zmdi zmdi-power"></i>Logout</a>
                       </div>
                     </div>
@@ -220,31 +220,31 @@
 
     
     <!-- Jquery JS-->
-    <script src="/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/assets/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
-    <script src="/vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="/assets/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <!-- Vendor JS       -->
-    <script src="/vendor/slick/slick.min.js">
+    <script src="/assets/vendor/slick/slick.min.js">
     </script>
-    <script src="/vendor/wow/wow.min.js"></script>
-    <script src="/vendor/animsition/animsition.min.js"></script>
-    <script src="/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="/assets/vendor/wow/wow.min.js"></script>
+    <script src="/assets/vendor/animsition/animsition.min.js"></script>
+    <script src="/assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
     </script>
-    <script src="/vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="/vendor/counter-up/jquery.counterup.min.js">
+    <script src="/assets/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="/assets/vendor/counter-up/jquery.counterup.min.js">
     </script>
-    <script src="/vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="/vendor/select2/select2.min.js">
+    <script src="/assets/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/assets/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="/assets/vendor/select2/select2.min.js">
     </script>
-    <script src="/vendor/vector-map/jquery.vmap.js"></script>
-    <script src="/vendor/vector-map/jquery.vmap.min.js"></script>
-    <script src="/vendor/vector-map/jquery.vmap.sampledata.js"></script>
-    <script src="/vendor/vector-map/jquery.vmap.world.js"></script>
+    <script src="/assets/vendor/vector-map/jquery.vmap.js"></script>
+    <script src="/assets/vendor/vector-map/jquery.vmap.min.js"></script>
+    <script src="/assets/vendor/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="/assets/vendor/vector-map/jquery.vmap.world.js"></script>
 
     <!-- Main JS-->
-    <script src="/js/main-dashboard.js"></script>
+    <script src="/assets/js/main-dashboard.js"></script>
 </body>
 </html>
