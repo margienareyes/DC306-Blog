@@ -67,10 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BlogArticleList.aspx" />
-    <Content Include="BlogArticleView.aspx" />
-    <Content Include="BlogAuthorList.aspx" />
-    <Content Include="BlogAuthorView.aspx" />
+    <Content Include="articles.aspx" />
+    <Content Include="article.aspx" />
+    <Content Include="authors.aspx" />
+    <Content Include="author.aspx" />
     <Content Include="assets\css\animate.css" />
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\flexslider.css" />
@@ -258,33 +258,33 @@
     <Compile Include="Blog.Master.designer.cs">
       <DependentUpon>Blog.Master</DependentUpon>
     </Compile>
-    <Compile Include="BlogArticleList.aspx.cs">
-      <DependentUpon>BlogArticleList.aspx</DependentUpon>
+    <Compile Include="articles.aspx.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BlogArticleList.aspx.designer.cs">
-      <DependentUpon>BlogArticleList.aspx</DependentUpon>
+    <Compile Include="articles.aspx.designer.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BlogArticleView.aspx.cs">
-      <DependentUpon>BlogArticleView.aspx</DependentUpon>
+    <Compile Include="article.aspx.cs">
+      <DependentUpon>article.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BlogArticleView.aspx.designer.cs">
-      <DependentUpon>BlogArticleView.aspx</DependentUpon>
+    <Compile Include="article.aspx.designer.cs">
+      <DependentUpon>article.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BlogAuthorList.aspx.cs">
-      <DependentUpon>BlogAuthorList.aspx</DependentUpon>
+    <Compile Include="authors.aspx.cs">
+      <DependentUpon>authors.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BlogAuthorList.aspx.designer.cs">
-      <DependentUpon>BlogAuthorList.aspx</DependentUpon>
+    <Compile Include="authors.aspx.designer.cs">
+      <DependentUpon>authors.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BlogAuthorView.aspx.cs">
-      <DependentUpon>BlogAuthorView.aspx</DependentUpon>
+    <Compile Include="author.aspx.cs">
+      <DependentUpon>author.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BlogAuthorView.aspx.designer.cs">
-      <DependentUpon>BlogAuthorView.aspx</DependentUpon>
+    <Compile Include="author.aspx.designer.cs">
+      <DependentUpon>author.aspx</DependentUpon>
     </Compile>
     <Compile Include="dashboard\Dashboard.Master.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>

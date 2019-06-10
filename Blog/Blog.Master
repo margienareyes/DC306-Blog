@@ -67,9 +67,9 @@
 					    </div>
 					    <div class="col-xs-10 text-right menu-1">
 						    <ul>
-							    <li><a href="/assets//">HOME</a></li>
-								<li><a href="/assets/BlogAuthorView.aspx">AUTHORS</a></li>
-                                <li><a href="/assets/BlogArticleList.aspx">ARTICLE</a></li>
+							    <li><a href="/">HOME</a></li>
+								<li><a href="authors.aspx">AUTHORS</a></li>
+                                <li><a href="articles.aspx">ARTICLES</a></li>
 						    </ul>
 					    </div>
 				    </div>
@@ -98,9 +98,9 @@
 						<h2>Navigational</h2>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="/assets//">HOME</a></li>
-								<li><a href="/assets/BlogAuthorView.aspx">AUTHORS</a></li>
-                                <li><a href="/assets/BlogArticleList.aspx">ARTICLE</a></li>
+							    <li><a href="/">HOME</a></li>
+								<li><a href="authors.aspx">AUTHORS</a></li>
+                                <li><a href="articles.aspx">ARTICLES</a></li>
 							</ul>
 						</p>
 					</div>
