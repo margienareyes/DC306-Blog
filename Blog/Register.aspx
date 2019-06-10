@@ -52,7 +52,7 @@
                                     <asp:Label runat="server" ID="labelStatus" ForeColor="Red"></asp:Label>
                                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                                   &nbsp
-                                 <asp:LinkButton ID="lnkLogin" runat="server" OnClick="lnkLogin_Click" Visible="False">Login Here</asp:LinkButton>
+                                 <asp:LinkButton ID="lnkLogin" runat="server" OnClick="lnkLogin_Click">Login Here</asp:LinkButton>
                                </div>
                                 <div class="form-group">
                                     <label>Name</label>

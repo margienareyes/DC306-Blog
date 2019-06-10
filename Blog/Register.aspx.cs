@@ -60,7 +60,6 @@ namespace Blog
                     txtUsername.Text = "";
                     txtEmail.Text = "";
                     txtPassword.Text = "";
-                    lnkLogin.Visible = true; 
                  
 
                 }
