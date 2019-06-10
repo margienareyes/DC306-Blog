@@ -73,6 +73,9 @@
                                     <asp:TextBox ID="txtPassword" Cssclass="au-input au-input--full" name="Password" placeholder="Password" type="password" runat="server" required>
                                   </asp:TextBox>
                                 </div>
+                                      <label for="cc-payment" class="control-label mb-1">Image</label>
+                                      <asp:FileUpload runat="server" ID="fileUploadImage"></asp:FileUpload>
+
                                 <asp:Button ID="btnRegister" Text="Register" CssClass="au-btn au-btn--block au-btn--green m-b-20" runat="server" OnClick="btnRegister_Click"/>
                                  </form>
                         </div>

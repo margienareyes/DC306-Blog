@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Web.Configuration;
 using System.Configuration;
+using System.IO;
 
 namespace Blog
 {
@@ -33,6 +34,7 @@ namespace Blog
             cmd.Parameters.AddWithValue("txtUsername", txtUsername.Text);
             cmd.Connection = con;
             SqlDataReader rd = cmd.ExecuteReader();
+
             if (rd.HasRows)
 
             {
@@ -42,18 +44,31 @@ namespace Blog
             }
             else
             {
+                string filename = fileUploadImage.FileName;
+                string path = Server.MapPath("public/authors");
+
                 conn = new SqlConnection(connStr);
-                cmd = new SqlCommand("insert into [Author] (Name, Username, Password, Email) values (@Name , @Username, @Password, @Email)", conn);
+                cmd = new SqlCommand("insert into [Author] (Name, Username, Password, Email, ImagePath) values (@Name , @Username, @Password, @Email, @ImagePath)", conn);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@ImagePath", "/public/authors" + filename);
 
 
                 conn.Open();
                 try
                 {
                     cmd.ExecuteNonQuery();
+                    if (fileUploadImage.HasFile)
+                    {
+                        string ext = Path.GetExtension(filename);
+                        if (ext == ".jpg" || ext == ".png")
+                        {
+                            fileUploadImage.PostedFile.SaveAs(path + filename);
+                        }
+                    }
+
                     labelStatus.Text = "Thank you! You are now registered ";
                     Label1.Text = "";
                     txtName.Text = "";
