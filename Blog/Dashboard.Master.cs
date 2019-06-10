@@ -7,8 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Blog
 {
+
     public partial class Dashboard : System.Web.UI.MasterPage
     {
+        public string MyString = "Margiena";
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
