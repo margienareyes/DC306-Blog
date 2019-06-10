@@ -66,7 +66,13 @@
                                     }
                                 </script>
 
-                            </div>                   
+                            </div>  
+                        
+                        <div class="form-group">
+                            <label for="cc-payment" class="control-label mb-1">Image</label>
+                            <asp:FileUpload runat="server" ID="fileUploadImage"></asp:FileUpload>
+                        
+                        </div>
                         </form>
                 </div>
             </div>

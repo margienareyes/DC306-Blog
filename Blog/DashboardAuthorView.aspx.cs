@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Web.Configuration;
 using System.Configuration;
+using System.IO;
 
 namespace Blog
 {
@@ -39,16 +40,31 @@ namespace Blog
             }
             else
             {
+
+                string filename = fileUploadImage.FileName;
+                string path = Server.MapPath("public/authors");
+
                 conn = new SqlConnection(connStr);
-                cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password) values (@Name,@Email,@Username,@Password)", conn);
+                cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password, ImagePath) values (@Name,@Email,@Username,@Password, @ImagePath)", conn);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
+                cmd.Parameters.AddWithValue("@ImagePath", "/public/authors" + filename);
+
                 conn.Open();
                 try
                 {
                     cmd.ExecuteNonQuery();
+                    if (fileUploadImage.HasFile)
+                    {
+                        string ext = Path.GetExtension(filename);
+                        if (ext == ".jpg" || ext == ".png")
+                        {
+                            fileUploadImage.PostedFile.SaveAs(path + filename);
+                        }
+                    }
+
                     labelStatus.Text = "Thank you! You are now registered ";
                     Label1.Text = "";
                     txtName.Text = "";
