@@ -14,8 +14,8 @@ namespace Blog
 {
     public partial class DashboardAuthorView : System.Web.UI.Page
     {
-        private SqlConnection conn; //create a connection object
-        private SqlCommand cmd; //create a command object ArtSchoolDB
+        private SqlConnection conn; //create connection
+        private SqlCommand cmd;  // create command
         String connStr = WebConfigurationManager.ConnectionStrings["Blog"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
