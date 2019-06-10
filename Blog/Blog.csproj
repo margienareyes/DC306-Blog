@@ -83,11 +83,11 @@
     <Content Include="assets\css\theme.css" />
     <Content Include="assets\css\trix.css" />
     <Content Include="assets\css\_bootstrap-mincer.css" />
-    <Content Include="dashboard\DashboardArticleList.aspx" />
-    <Content Include="dashboard\DashboardArticleView.aspx" />
-    <Content Include="dashboard\DashboardAuthorList.aspx" />
-    <Content Include="dashboard\DashboardAuthorView.aspx" />
-    <Content Include="dashboard\DashboardWelcome.aspx" />
+    <Content Include="dashboard\articles.aspx" />
+    <Content Include="dashboard\article.aspx" />
+    <Content Include="dashboard\authors.aspx" />
+    <Content Include="dashboard\author.aspx" />
+    <Content Include="dashboard\index.aspx" />
     <Content Include="assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="assets\fonts\icomoon\icomoon.svg" />
     <Content Include="assets\fonts\poppins\poppins-v5-latin-100.svg" />
@@ -293,40 +293,40 @@
     <Compile Include="dashboard\Dashboard.Master.designer.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
     </Compile>
-    <Compile Include="dashboard\DashboardArticleList.aspx.cs">
-      <DependentUpon>DashboardArticleList.aspx</DependentUpon>
+    <Compile Include="dashboard\articles.aspx.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard\DashboardArticleList.aspx.designer.cs">
-      <DependentUpon>DashboardArticleList.aspx</DependentUpon>
+    <Compile Include="dashboard\articles.aspx.designer.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard\DashboardArticleView.aspx.cs">
-      <DependentUpon>DashboardArticleView.aspx</DependentUpon>
+    <Compile Include="dashboard\article.aspx.cs">
+      <DependentUpon>article.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard\DashboardArticleView.aspx.designer.cs">
-      <DependentUpon>DashboardArticleView.aspx</DependentUpon>
+    <Compile Include="dashboard\article.aspx.designer.cs">
+      <DependentUpon>article.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard\DashboardAuthorList.aspx.cs">
-      <DependentUpon>DashboardAuthorList.aspx</DependentUpon>
+    <Compile Include="dashboard\authors.aspx.cs">
+      <DependentUpon>authors.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard\DashboardAuthorList.aspx.designer.cs">
-      <DependentUpon>DashboardAuthorList.aspx</DependentUpon>
+    <Compile Include="dashboard\authors.aspx.designer.cs">
+      <DependentUpon>authors.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard\DashboardAuthorView.aspx.cs">
-      <DependentUpon>DashboardAuthorView.aspx</DependentUpon>
+    <Compile Include="dashboard\author.aspx.cs">
+      <DependentUpon>author.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard\DashboardAuthorView.aspx.designer.cs">
-      <DependentUpon>DashboardAuthorView.aspx</DependentUpon>
+    <Compile Include="dashboard\author.aspx.designer.cs">
+      <DependentUpon>author.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard\DashboardWelcome.aspx.cs">
-      <DependentUpon>DashboardWelcome.aspx</DependentUpon>
+    <Compile Include="dashboard\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard\DashboardWelcome.aspx.designer.cs">
-      <DependentUpon>DashboardWelcome.aspx</DependentUpon>
+    <Compile Include="dashboard\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

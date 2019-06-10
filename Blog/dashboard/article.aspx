@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" ValidateRequest="false" Language="C#" MasterPageFile="./Dashboard.Master" AutoEventWireup="true" CodeBehind="DashboardArticleView.aspx.cs" Inherits="Blog.DashboardArticleView" %>
+﻿<%@ Page Title="" ValidateRequest="false" Language="C#" MasterPageFile="./Dashboard.Master" AutoEventWireup="true" CodeBehind="article.aspx.cs" Inherits="Blog.DashboardArticleView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   <link rel="stylesheet" type="text/css" href="/assets/css/trix.css">
   <script type="text/javascript" src="/assets//js/trix.js"></script>
