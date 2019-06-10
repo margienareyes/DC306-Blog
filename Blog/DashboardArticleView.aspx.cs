@@ -33,7 +33,7 @@ namespace Blog
 
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
             SqlCommand.Parameters.AddWithValue("@Content", this.textboxContent.Text);
-            SqlCommand.Parameters.AddWithValue("@ImagePath", "~/public/" + filename);
+            SqlCommand.Parameters.AddWithValue("@ImagePath", "/public/" + filename);
             
             this.SqlConnection.Open();
             try
