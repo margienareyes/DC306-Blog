@@ -168,6 +168,7 @@
     <Content Include="js\respond.min.js" />
     <Content Include="js\trix.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="vendor\animsition\animsition.min.css" />
     <Content Include="vendor\animsition\animsition.min.js" />
     <Content Include="vendor\bootstrap-4.1\bootstrap.min.css" />
@@ -334,6 +335,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

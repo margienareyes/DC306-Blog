@@ -35,7 +35,9 @@ namespace Blog
             }
             else
             {
-                Response.Write("User do not exist!");
+                Response.Write("<script>alert('User do not exist!');</script>");
+                txtPassword.Text = "";
+                txtUsername.Text = "";
             }
             con.Close();
         }
