@@ -82,13 +82,23 @@
                 <li>
                   <a href="index2.html">New Author</a>
                 </li>
-               
+                   <li class="has-sub">
+              <a class="js-arrow" href="#">
+                <i class="fas fa-tachometer-alt"></i>Account</a>
+              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                <li>
+                  <a href="index.html">Register</a>
+                </li>
+                <li>
+                  <a href="index2.html">Login</a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+               
     <!-- END HEADER MOBILE-->
 
     
@@ -101,6 +111,11 @@
       </div>
       <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar__list">
+            <li class="has-sub">
+              <a class="js-arrow" href="#">
+                <i class="fas fa-tachometer-alt"></i>Home</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
           <ul class="list-unstyled navbar__list">
             <li class="has-sub">
               <a class="js-arrow" href="#">
@@ -113,6 +128,7 @@
                   <a href="index2.html">New Article</a>
                 </li>
               </ul>
+
             </li>
               <li class="has-sub">
               <a class="js-arrow" href="#">
