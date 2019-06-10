@@ -31,6 +31,15 @@ namespace Blog {
         protected global::System.Web.UI.WebControls.TextBox textboxTitle;
         
         /// <summary>
+        /// fileUploadImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileUploadImage;
+        
+        /// <summary>
         /// textboxContent control.
         /// </summary>
         /// <remarks>
