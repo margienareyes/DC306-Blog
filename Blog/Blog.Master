@@ -70,8 +70,6 @@
 							    <li><a href="/">HOME</a></li>
 								<li><a href="BlogAuthorView.aspx">AUTHORS</a></li>
                                 <li><a href="BlogArticleList.aspx">ARTICLE</a></li>
-                                <li><a href="Login.aspx">LOGIN</a></li>
-                                <li><a href="Register.aspx">REGISTER</a></li>
 						    </ul>
 					    </div>
 				    </div>
@@ -103,8 +101,6 @@
 								<li><a href="/">HOME</a></li>
 								<li><a href="BlogAuthorView.aspx">AUTHORS</a></li>
                                 <li><a href="BlogArticleList.aspx">ARTICLE</a></li>
-                                <li><a href="Login.aspx">LOGIN</a></li>
-                                <li><a href="register.aspx">REGISTER</a></li>
 							</ul>
 						</p>
 					</div>
