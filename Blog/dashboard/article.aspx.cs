@@ -66,7 +66,7 @@ namespace Blog
             {
                 SqlCommand = new SqlCommand("" +
                     "UPDATE Article " +
-                    "SET Title=@Title, Excerpt=@Excerpt " +
+                    "SET Title=@Title, Excerpt=@Excerpt, Content=@Content,  ImagePath=@ImagePath " +
                     "WHERE ArticleId=@ArticleId",
                     this.SqlConnection);
                 SqlCommand.Parameters.AddWithValue("ArticleId", id);
