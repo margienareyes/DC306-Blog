@@ -10,11 +10,20 @@ namespace Blog
 
     public partial class Dashboard : System.Web.UI.MasterPage
     {
-        public string MyString = "Margiena";
+        public string name;
+        public string username;
+        public string email;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["AuthorId"] == null)
+            {
+                Response.Redirect("/login.aspx");
+            }
 
+            this.name = Session["AuthorName"].ToString();
+            this.username = Session["AuthorUsername"].ToString();
+            this.email = Session["AuthorEmail"].ToString();
         }
     }
 }

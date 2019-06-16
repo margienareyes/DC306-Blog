@@ -105,7 +105,7 @@
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
       <div class="logo">
-        <a href="/assets/#">
+        <a href="/dashboard/index.aspx">
           <img src="/assets/images/logo.png" alt="Cool Admin" />
         </a>
       </div>
@@ -154,7 +154,7 @@
                       <img src="/assets/images/icon/avatar-01.jpg" alt="John Doe" />
                     </div>
                     <div class="content">
-                      <a class="js-acc-btn" href="/assets/#"><%#MyString%></a>
+                      <a class="js-acc-btn" href="/assets/#"><%Response.Write(username); %></a>
                     </div>
                     <div class="account-dropdown js-dropdown">
                       <div class="info clearfix">
@@ -165,9 +165,9 @@
                         </div>
                         <div class="content">
                           <h5 class="name">
-                            <a href="/assets/#"><%# MyString%></a>
+                            <a href="/assets/#"><%Response.Write(name); %></a>
                           </h5>
-                          <span class="email">johndoe@example.com</span>
+                          <span class="email"><%Response.Write(email); %></span>
                         </div>
                       </div>
                       <div class="account-dropdown__body">
