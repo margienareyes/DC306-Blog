@@ -58,11 +58,6 @@
                                      <asp:TextBox ID="txtPassword" Cssclass="au-input au-input--full" type="password" name="password" placeholder="Password"  runat="server" required>
                                      </asp:TextBox>
                                 </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                </div>
                                 <asp:Button ID="btnLogin" Text="Login" CssClass="au-btn au-btn--block au-btn--green m-b-20" runat="server" OnClick="btnLogin_Click"/>
                             </form>
                         </div>
