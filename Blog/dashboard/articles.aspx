@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="./Dashboard.Master" AutoEventWireup="true" CodeBehind="articles.aspx.cs" Inherits="Blog.DashboardArticleList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Dashboard.Master" AutoEventWireup="true" CodeBehind="articles.aspx.cs" Inherits="Blog.DashboardArticleList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -14,7 +14,7 @@
                             </div>
                             <div>
                                 <button class="btn btn-primary" type="button">Edit</button>
-                                <button class="btn btn-danger" type="button">Delete</button>
+                                <asp:LinkButton ID="LinkButton1" runat="server" cssClass="btn btn-danger"  OnClick="buttonDelete_Click" CommandArgument='<%#Eval("Id") %>'>Delete</asp:LinkButton>
                             </div>
 				        </div>
 			        </div>
