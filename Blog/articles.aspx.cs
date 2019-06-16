@@ -21,7 +21,7 @@ namespace Blog
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
             this.SqlCommand = new SqlCommand("SELECT " +
-                "Article.ArticleId as ArticleId, Article.ImagePath as ImagePath, Article.Title as Title, Article.Date as Date, Author.Name as Author " +
+                "Article.ArticleId as ArticleId, Article.ImagePath as ImagePath, Article.Title as Title, Article.Date as Date, Author.Name as Author, Article.Excerpt as Excerpt " +
                 "FROM Article " +
                 "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
                 "ORDER BY date", this.SqlConnection);

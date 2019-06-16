@@ -19,6 +19,7 @@
 						                <span class="pos">By <a href="#"><%# Eval("Author") %></a></span>
 					                </p>
 					                <h2><a href="article.aspx?id=<%# Eval("ArticleId") %>"><%# Eval("Title") %></a></h2>
+                                    <p><%# Eval("Excerpt") %></p>
 				                </div>
 			                </div>
 		                </div>
