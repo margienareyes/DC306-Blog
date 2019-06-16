@@ -33,6 +33,11 @@ namespace Blog
             this.DataList1.DataBind();
         }
 
+        protected void buttonEdit_Click(object sender, EventArgs e)
+        {
+            string key = (sender as LinkButton).CommandArgument;
+            Response.Redirect("/dashboard/article.aspx?id=" + key);
+        }
         protected void buttonDelete_Click(object sender, EventArgs e)
         {
             string key = (sender as LinkButton).CommandArgument;

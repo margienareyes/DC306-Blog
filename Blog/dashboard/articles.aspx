@@ -13,8 +13,8 @@
                                 <span><%# Eval("Date") %> by <%# Eval("Author") %></span>
                             </div>
                             <div>
-                                <button class="btn btn-primary" type="button">Edit</button>
-                                <asp:LinkButton ID="LinkButton1" runat="server" cssClass="btn btn-danger"  OnClick="buttonDelete_Click" CommandArgument='<%#Eval("Id") %>'>Delete</asp:LinkButton>
+                                <asp:LinkButton ID="buttonEdit" runat="server" cssClass="btn btn-primary"  OnClick="buttonEdit_Click" CommandArgument='<%#Eval("Id") %>'>Edit</asp:LinkButton>
+                                <asp:LinkButton ID="buttonDelete" runat="server" cssClass="btn btn-danger"  OnClick="buttonDelete_Click" CommandArgument='<%#Eval("Id") %>'>Delete</asp:LinkButton>
                             </div>
 				        </div>
 			        </div>
