@@ -13,6 +13,7 @@ namespace Blog
         public string name;
         public string username;
         public string email;
+        public string imagePath;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,6 +25,7 @@ namespace Blog
             this.name = Session["AuthorName"].ToString();
             this.username = Session["AuthorUsername"].ToString();
             this.email = Session["AuthorEmail"].ToString();
+            this.imagePath = Session["AuthorImage"].ToString();
         }
     }
 }
