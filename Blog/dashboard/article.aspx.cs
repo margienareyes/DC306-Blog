@@ -23,11 +23,13 @@ namespace Blog
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.id = Request.QueryString["id"];
             
+            // ispostback
             if (IsPostBack)
             {
                 return;
             }
 
+            // if id url query, grab article by id
             if (id != null)
             {
 
@@ -44,6 +46,7 @@ namespace Blog
                     this.SqlDataReader = SqlCommand.ExecuteReader();
                     while (this.SqlDataReader.Read())
                     {
+                        // update textboxes using article 
                         textboxTitle.Text = this.SqlDataReader["Title"].ToString();
                         textboxExcerpt.Text = this.SqlDataReader["Excerpt"].ToString();
                         textboxContent.Text = this.SqlDataReader["Content"].ToString();
@@ -62,6 +65,8 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand;
+
+            // if url query, do update
             if (this.id != null)
             {
                 SqlCommand = new SqlCommand("" +
@@ -80,6 +85,8 @@ namespace Blog
             string filename = fileUploadImage.FileName;
             string path = Server.MapPath("../public/");
 
+
+
             SqlCommand.Parameters.AddWithValue("@Title", this.textboxTitle.Text);
             SqlCommand.Parameters.AddWithValue("@Content", this.textboxContent.Text);
             SqlCommand.Parameters.AddWithValue("@AuthorId", Session["AuthorId"]);
@@ -96,6 +103,7 @@ namespace Blog
             {
                 if (SqlCommand.ExecuteNonQuery() == 1)
                 {
+                    // image
                     if (fileUploadImage.HasFile) {
                         string ext = Path.GetExtension(filename);
                         if (ext == ".jpg" || ext == ".png")
@@ -125,6 +133,7 @@ namespace Blog
 
         protected void clearForm()
         {
+            // clear the form
             this.textboxTitle.Text = "";
             this.textboxContent.Text = "";
             this.textboxExcerpt.Text = "";

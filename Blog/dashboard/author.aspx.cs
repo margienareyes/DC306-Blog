@@ -24,11 +24,13 @@ namespace Blog
 
             this.id = Request.QueryString["id"];
 
+            // magic sauce
             if (IsPostBack)
             {
                 return;
             }
 
+            // if url query, get article by id
             if (id != null)
             {
 
@@ -42,6 +44,7 @@ namespace Blog
                     this.SqlDataReader = SqlCommand.ExecuteReader();
                     while (this.SqlDataReader.Read())
                     {
+                        // and display on textbox
                         txtName.Text = this.SqlDataReader["Name"].ToString();
                         txtEmail.Text = this.SqlDataReader["Email"].ToString();
                         txtUser.Text = this.SqlDataReader["Username"].ToString();
@@ -67,6 +70,7 @@ namespace Blog
             con.Open();
             SqlCommand cmd = new SqlCommand();
 
+            // if url query, do update
             if (id != null)
             {
                 cmd.CommandText = "" +
@@ -79,6 +83,10 @@ namespace Blog
                 return;
             }
 
+
+            // else save new
+
+            // check username duplicate
             cmd.CommandText = "select * from [Author] where Username=@txtUser";
             cmd.Parameters.AddWithValue("txtUser", txtUser.Text);
             cmd.Connection = con;
@@ -109,6 +117,7 @@ namespace Blog
                     cmd.ExecuteNonQuery();
                     if (fileUploadImage.HasFile)
                     {
+                        // image
                         string ext = Path.GetExtension(filename);
                         if (ext == ".jpg" || ext == ".png")
                         {
@@ -116,6 +125,7 @@ namespace Blog
                         }
                     }
 
+                    // clear
                     labelStatus.Text = "Thank you! You are now registered ";
                     Label1.Text = "";
                     txtName.Text = "";

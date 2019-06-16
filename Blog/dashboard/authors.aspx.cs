@@ -18,6 +18,7 @@ namespace Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // grab all authors
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
             this.SqlCommand = new SqlCommand("SELECT AuthorId, Name, Username, Email FROM Author ORDER BY AuthorId", this.SqlConnection);
@@ -30,11 +31,13 @@ namespace Blog
         }
         protected void buttonEdit_Click(object sender, EventArgs e)
         {
+            // goto /author by id
             string key = (sender as LinkButton).CommandArgument;
             Response.Redirect("/dashboard/author.aspx?id=" + key);
         }
         protected void buttonDelete_Click(object sender, EventArgs e)
         {
+            // delete author by id
             string key = (sender as LinkButton).CommandArgument;
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();

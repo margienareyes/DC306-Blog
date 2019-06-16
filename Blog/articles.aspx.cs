@@ -18,6 +18,7 @@ namespace Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // grab all articles and display
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
             this.SqlCommand = new SqlCommand("SELECT " +

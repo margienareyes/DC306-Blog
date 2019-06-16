@@ -17,7 +17,8 @@ namespace Blog
         string connectionString = WebConfigurationManager.ConnectionStrings["Blog"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
+            // grab all authors from database and display
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
             this.SqlCommand = new SqlCommand("SELECT AuthorId, Name, Username, Email FROM Author ORDER BY AuthorId", this.SqlConnection);

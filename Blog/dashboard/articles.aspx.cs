@@ -18,6 +18,7 @@ namespace Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // grab all articles
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
             this.SqlCommand = new SqlCommand("SELECT " +
@@ -35,11 +36,13 @@ namespace Blog
 
         protected void buttonEdit_Click(object sender, EventArgs e)
         {
+            // goto /articles by id
             string key = (sender as LinkButton).CommandArgument;
             Response.Redirect("/dashboard/article.aspx?id=" + key);
         }
         protected void buttonDelete_Click(object sender, EventArgs e)
         {
+            // delete article by id
             string key = (sender as LinkButton).CommandArgument;
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();

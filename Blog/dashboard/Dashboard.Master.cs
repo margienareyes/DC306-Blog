@@ -16,7 +16,8 @@ namespace Blog
         public string imagePath;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
+            // route guard: check if session author id exists
             if (Session["AuthorId"] == null)
             {
                 Response.Redirect("/login.aspx");

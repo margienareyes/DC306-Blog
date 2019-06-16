@@ -16,27 +16,35 @@ namespace Blog
         SqlDataReader SqlDataReader;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string logout = Request.QueryString["logout"];
-
-            if (logout == "1")
-            {
-                Session.Remove("AuthorId");
-                Session.Remove("AuthorUsername");
-                Session.Remove("AuthorName");
-                Session.Remove("AuthorEmail");
-                Session.Remove("AuthorImage");
+            // check if query string is logout
+            string isLogout = Request.QueryString["logout"];
+            if (isLogout == "1")
+            {   
+                logout();
             }
+        }
+
+        protected void logout()
+        {
+            // clear session
+            Session.Remove("AuthorId");
+            Session.Remove("AuthorUsername");
+            Session.Remove("AuthorName");
+            Session.Remove("AuthorEmail");
+            Session.Remove("AuthorImage");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         { 
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
-        con.Open();
-            string query = "SELECT * FROM Author where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
-        SqlCommand cmd = new SqlCommand(query, con);
+            // check username && password match on db
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
+            con.Open();
+                string query = "SELECT * FROM Author where Username='" + txtUsername.Text + "'and Password='" + txtPassword.Text + "'";
 
-        string output = Convert.ToString(cmd.ExecuteScalar());
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            string output = Convert.ToString(cmd.ExecuteScalar());
 
             if (output != "")
             {
@@ -55,6 +63,7 @@ namespace Blog
 
         private void saveSession(int authorId)
         {
+            // grab author info by id
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
             SqlCommand SqlCommand = new SqlCommand("SELECT * FROM Author WHERE AuthorId=@AuthorId", con);
             SqlCommand.Parameters.AddWithValue("@AuthorId", authorId);
@@ -65,6 +74,7 @@ namespace Blog
                 this.SqlDataReader = SqlCommand.ExecuteReader();
                 while (this.SqlDataReader.Read())
                 {
+                    // save session
                     Session["AuthorId"] = this.SqlDataReader["AuthorId"].ToString();
                     Session["AuthorUsername"] = this.SqlDataReader["Username"].ToString();
                     Session["AuthorName"] = this.SqlDataReader["Name"].ToString();

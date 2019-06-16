@@ -25,6 +25,7 @@ namespace Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // grab article by id
             string id = Request.QueryString["id"];
             SqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
             SqlCommand SqlCommand = new SqlCommand("SELECT " +
@@ -40,6 +41,7 @@ namespace Blog
                 this.SqlDataReader = SqlCommand.ExecuteReader();
                 while (this.SqlDataReader.Read())
                 {
+                    // update display using article queried
                     title = this.SqlDataReader["Title"].ToString();
                     author = this.SqlDataReader["Author"].ToString();
                     date = this.SqlDataReader["Date"].ToString();
