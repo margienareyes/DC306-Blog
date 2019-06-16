@@ -17,8 +17,46 @@ namespace Blog
         private SqlConnection conn; //create connection
         private SqlCommand cmd;  // create command
         String connStr = WebConfigurationManager.ConnectionStrings["Blog"].ConnectionString;
+        public string id;
+        SqlDataReader SqlDataReader;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            this.id = Request.QueryString["id"];
+
+            if (IsPostBack)
+            {
+                return;
+            }
+
+            if (id != null)
+            {
+
+                SqlConnection con = new SqlConnection(this.connStr);
+                SqlCommand SqlCommand = new SqlCommand("SELECT * FROM Author WHERE AuthorId=@AuthorId", con);
+                SqlCommand.Parameters.AddWithValue("@AuthorId", id);
+
+                try
+                {
+                    con.Open();
+                    this.SqlDataReader = SqlCommand.ExecuteReader();
+                    while (this.SqlDataReader.Read())
+                    {
+                        txtName.Text = this.SqlDataReader["Name"].ToString();
+                        txtEmail.Text = this.SqlDataReader["Email"].ToString();
+                        txtUser.Text = this.SqlDataReader["Username"].ToString();
+                        txtPass.Text = this.SqlDataReader["Password"].ToString();
+                        txtConPass.Text = this.SqlDataReader["Password"].ToString();
+                    }
+                }
+
+                catch (Exception exception)
+                {
+
+                }
+
+                con.Close();
+            }
 
         }
 
@@ -28,6 +66,19 @@ namespace Blog
             con.ConnectionString = ConfigurationManager.ConnectionStrings["Blog"].ToString();
             con.Open();
             SqlCommand cmd = new SqlCommand();
+
+            if (id != null)
+            {
+                cmd.CommandText = "" +
+                    "UPDATE Author " +
+                    "SET Name=@Name, Email=@Email, Username=@Username,  ImagePath=@ImagePath, Password=@Password " +
+                    "WHERE AuthorId=@AuthorId";
+                cmd.Connection = con;
+                cmd.Parameters.AddWithValue("AuthorId", id);
+                con.Close();
+                return;
+            }
+
             cmd.CommandText = "select * from [Author] where Username=@txtUser";
             cmd.Parameters.AddWithValue("txtUser", txtUser.Text);
             cmd.Connection = con;
