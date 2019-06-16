@@ -104,12 +104,13 @@ namespace Blog
                 string path = Server.MapPath("../public/authors");
 
                 conn = new SqlConnection(connStr);
-                cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password, ImagePath) values (@Name,@Email,@Username,@Password, @ImagePath)", conn);
+                cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password, ImagePath, IsSuperAdmin) values (@Name,@Email,@Username,@Password, @ImagePath, @IsSuperAdmin)", conn);
                 cmd.Parameters.AddWithValue("@Name", txtName.Text);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
                 cmd.Parameters.AddWithValue("@ImagePath", "/public/authors" + filename);
+                cmd.Parameters.AddWithValue("@IsSuperAdmin", this.checkboxIsAdmin.Checked);
 
                 conn.Open();
                 try

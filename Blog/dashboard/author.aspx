@@ -48,7 +48,10 @@
                                 <br />
 
                             <input id="cbShowHidePassword" type="checkbox" onclick="ShowHidePassword();" /> <span>Show Password</span>
+                                <div>
 
+                             <asp:CheckBox runat="server" ID="checkboxIsAdmin"></asp:CheckBox> <span> Is admin</span>
+                                </div>
                                 <script type="text/javascript">
                                     function ShowHidePassword() {
                                         var txt = $('#<%=txtPass.ClientID%>');
