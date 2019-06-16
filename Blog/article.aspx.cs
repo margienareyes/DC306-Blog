@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-using System.Web.Configuration;
+using System.Configuration;
 
 namespace Blog
 {
@@ -14,36 +14,47 @@ namespace Blog
     {
         private SqlConnection SqlConnection;
         private SqlCommand SqlCommand;
-        string connectionString = WebConfigurationManager.ConnectionStrings["ArtSchoolDB"].ConnectionString;
         SqlDataReader SqlDataReader;
+
+        public string title = "12312";
+        public string author;
+        public string date;
+        public string excerpt;
+        public string imagePath;
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string id = Request.QueryString["id"]; 
-            //this.SqlConnection = new SqlConnection(this.connectionString);
-            //this.SqlCommand = new SqlCommand("SELECT Id, day, time, topic, tutor FROM Schedule WHERE Id=@id", this.SqlConnection);
-            //this.SqlCommand.Parameters.AddWithValue("@id", id);
+            string id = Request.QueryString["id"];
+            SqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Blog"].ToString());
+            SqlCommand SqlCommand = new SqlCommand("SELECT " +
+                "Article.ArticleId as ArticleId, Article.ImagePath as ImagePath, Article.Title as Title, Article.Date as Date, Author.Name as Author, Article.Excerpt as Excerpt, Article.Content as Content  " +
+                "FROM Article " +
+                "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
+                "WHERE ArticleId=@ArticleId", SqlConnection);
+            SqlCommand.Parameters.AddWithValue("@ArticleId", id);
 
-            //try
-            //{
-            //    this.SqlConnection.Open();
-            //    this.SqlDataReader = this.SqlCommand.ExecuteReader();
-            //    while (this.SqlDataReader.Read())
-            //    {
-            //        this.textboxDay.Text = this.SqlDataReader["day"].ToString();
-            //        this.textboxTime.Text = this.SqlDataReader["time"].ToString();
-            //        this.textboxTopic.Text = this.SqlDataReader["topic"].ToString();
-            //        this.textboxTutor.Text = this.SqlDataReader["tutor"].ToString();
-            //        this.textboxId.Text = this.SqlDataReader["Id"].ToString();
-            //    }
-            //}
+            try
+            {
+                SqlConnection.Open();
+                this.SqlDataReader = SqlCommand.ExecuteReader();
+                while (this.SqlDataReader.Read())
+                {
+                    title = this.SqlDataReader["Title"].ToString();
+                    author = this.SqlDataReader["Author"].ToString();
+                    date = this.SqlDataReader["Date"].ToString();
+                    excerpt = this.SqlDataReader["Excerpt"].ToString();
+                    imagePath = this.SqlDataReader["ImagePath"].ToString();
+                    this.contentLiteral.Text = this.SqlDataReader["Content"].ToString();
+                }
+            }
 
-            //catch (Exception exception)
-            //{
-            //    this.labelStatus.Text = exception.Message;
-            //}
+            catch (Exception exception)
+            {
 
-            //this.SqlConnection.Close();
+            }
+
+            SqlConnection.Close();
         }
     }
 }
