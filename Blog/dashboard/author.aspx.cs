@@ -50,7 +50,7 @@ namespace Blog
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-                cmd.Parameters.AddWithValue("@ImagePath", "/public/authors" + filename);
+                cmd.Parameters.AddWithValue("@ImagePath", "../public/authors" + filename);
 
                 conn.Open();
                 try
