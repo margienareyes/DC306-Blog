@@ -16,7 +16,16 @@ namespace Blog
         SqlDataReader SqlDataReader;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string logout = Request.QueryString["logout"];
 
+            if (logout == "1")
+            {
+                Session.Remove("AuthorId");
+                Session.Remove("AuthorUsername");
+                Session.Remove("AuthorName");
+                Session.Remove("AuthorEmail");
+                Session.Remove("AuthorImage");
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
