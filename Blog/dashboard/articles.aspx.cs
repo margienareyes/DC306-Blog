@@ -21,11 +21,26 @@ namespace Blog
             // grab all articles
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
-            this.SqlCommand = new SqlCommand("SELECT " +
-                "Article.ArticleId as Id, Article.Title as Title, Article.Date as Date, Author.Name as Author " +
-                "FROM Article " +
-                "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
-                "ORDER BY date", this.SqlConnection);
+
+            string isAdmin = Session["AuthorIsAdmin"] != null ? Session["AuthorIsAdmin"].ToString() : "";
+            if (isAdmin == "True")
+            {
+                this.SqlCommand = new SqlCommand("SELECT " +
+                    "Article.ArticleId as Id, Article.Title as Title, Article.Date as Date, Author.Name as Author " +
+                    "FROM Article " +
+                    "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
+                    "ORDER BY date", this.SqlConnection);
+            } else
+            {
+                this.SqlCommand = new SqlCommand("SELECT " +
+                    "Article.ArticleId as Id, Article.Title as Title, Article.Date as Date, Author.Name as Author " +
+                    "FROM Article " +
+                    "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
+                    "WHERE Article.AuthorId = @AuthorId " +
+                    "ORDER BY date", this.SqlConnection);
+                this.SqlCommand.Parameters.AddWithValue("@AuthorId", Session["AuthorId"] != null ? Session["AuthorId"] : 0);
+            }
+
             this.SqlCommand.ExecuteNonQuery();
             DataSet ds = new DataSet();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(this.SqlCommand);

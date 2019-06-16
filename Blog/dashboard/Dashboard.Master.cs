@@ -23,7 +23,7 @@ namespace Blog
                 Response.Redirect("/login.aspx");
             }
 
-            this.name = Session["AuthorName"].ToString();
+            this.name = Session["AuthorIsAdmin"].ToString();
             this.username = Session["AuthorUsername"].ToString();
             this.email = Session["AuthorEmail"].ToString();
             this.imagePath = Session["AuthorImage"].ToString();
