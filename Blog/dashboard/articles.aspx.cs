@@ -22,6 +22,7 @@ namespace Blog
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
 
+            // if admin, get all. else, get only own
             string isAdmin = Session["AuthorIsAdmin"] != null ? Session["AuthorIsAdmin"].ToString() : "";
             if (isAdmin == "True")
             {
