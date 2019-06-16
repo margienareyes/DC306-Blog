@@ -28,5 +28,19 @@ namespace Blog
             this.DataList1.DataSource = ds;
             this.DataList1.DataBind();
         }
+        protected void buttonEdit_Click(object sender, EventArgs e)
+        {
+            string key = (sender as LinkButton).CommandArgument;
+            Response.Redirect("/dashboard/author.aspx?id=" + key);
+        }
+        protected void buttonDelete_Click(object sender, EventArgs e)
+        {
+            string key = (sender as LinkButton).CommandArgument;
+            this.SqlConnection = new SqlConnection(this.connectionString);
+            this.SqlConnection.Open();
+            this.SqlCommand = new SqlCommand("DELETE FROM Author WHERE AuthorId=@id;", this.SqlConnection);
+            this.SqlCommand.Parameters.AddWithValue("id", key);
+
+        }
     }
 }

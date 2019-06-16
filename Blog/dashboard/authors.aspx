@@ -12,8 +12,8 @@
                             <span><%# Eval("Name") %> - <%# Eval("Username") %></span>
                         </div>
                         <div>
-                            <button class="btn btn-primary" type="button">Edit</button>
-                            <button class="btn btn-danger" type="button">Delete</button>
+                            <asp:LinkButton ID="buttonEdit" runat="server" cssClass="btn btn-primary"  OnClick="buttonEdit_Click" CommandArgument='<%#Eval("AuthorId") %>'>Edit</asp:LinkButton>
+                            <asp:LinkButton ID="buttonDelete" runat="server" cssClass="btn btn-danger"  OnClick="buttonDelete_Click" CommandArgument='<%#Eval("AuthorId") %>'>Delete</asp:LinkButton>
                         </div>
 				    </div>
 			    </div>
