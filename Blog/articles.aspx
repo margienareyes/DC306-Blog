@@ -16,7 +16,7 @@
 				                <div class="desc">
 					                <p class="meta">
 						                <span class="date"><%# Eval("Date") %></span>
-						                <span class="pos">By <a href="#"><%# Eval("AuthorId") %></a></span>
+						                <span class="pos">By <a href="#"><%# Eval("Author") %></a></span>
 					                </p>
 					                <h2><a href="article.aspx?id=<%# Eval("ArticleId") %>"><%# Eval("Title") %></a></h2>
 				                </div>

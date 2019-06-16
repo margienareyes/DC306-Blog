@@ -20,7 +20,11 @@ namespace Blog
         {
             this.SqlConnection = new SqlConnection(this.connectionString);
             this.SqlConnection.Open();
-            this.SqlCommand = new SqlCommand("SELECT * FROM Article ORDER BY date", this.SqlConnection);
+            this.SqlCommand = new SqlCommand("SELECT " +
+                "Article.ArticleId as ArticleId, Article.ImagePath as ImagePath, Article.Title as Title, Article.Date as Date, Author.Name as Author " +
+                "FROM Article " +
+                "INNER JOIN Author ON Article.AuthorId = Author.AuthorId " +
+                "ORDER BY date", this.SqlConnection);
             this.SqlCommand.ExecuteNonQuery();
             DataSet ds = new DataSet();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(this.SqlCommand);
