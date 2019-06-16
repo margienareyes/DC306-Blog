@@ -25,7 +25,7 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand = new SqlCommand("" +
-                "INSERT INTO Article (Title, Content, ImagePath, AuthorId) VALUES (@Title, @Content, @ImagePath, @AuthorId);",
+                "INSERT INTO Article (Title, Content, ImagePath, AuthorId, Date) VALUES (@Title, @Content, @ImagePath, @AuthorId, @Date);",
                 this.SqlConnection);
 
             string filename = fileUploadImage.FileName;
@@ -35,7 +35,8 @@ namespace Blog
             SqlCommand.Parameters.AddWithValue("@Content", this.textboxContent.Text);
             SqlCommand.Parameters.AddWithValue("@AuthorId", Session["AuthorId"]);
             SqlCommand.Parameters.AddWithValue("@ImagePath", "/public/" + filename);
-            
+            SqlCommand.Parameters.AddWithValue("@Date", DateTime.Now);
+
             this.SqlConnection.Open();
             try
             {

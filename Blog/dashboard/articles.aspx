@@ -10,7 +10,7 @@
 				        <div class="card-header d-flex align-items-end">
                             <div class="mr-auto">
 					            <h2><%# Eval("Title") %></h2> 
-                                <span><%# Eval("Author") %> - <%# Eval("Date") %></span>
+                                <span><%# Eval("Date") %> by <%# Eval("Author") %></span>
                             </div>
                             <div>
                                 <button class="btn btn-primary" type="button">Edit</button>
