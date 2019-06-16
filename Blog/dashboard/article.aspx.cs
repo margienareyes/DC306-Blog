@@ -25,7 +25,7 @@ namespace Blog
         protected void buttonSave_Click(object sender, EventArgs e)
         {
             SqlCommand SqlCommand = new SqlCommand("" +
-                "INSERT INTO Article (Title, Content, ImagePath, AuthorId, Date) VALUES (@Title, @Content, @ImagePath, @AuthorId, @Date);",
+                "INSERT INTO Article (Title, Content, ImagePath, AuthorId, Date, Excerpt) VALUES (@Title, @Content, @ImagePath, @AuthorId, @Date, @Excerpt);",
                 this.SqlConnection);
 
             string filename = fileUploadImage.FileName;
@@ -36,6 +36,7 @@ namespace Blog
             SqlCommand.Parameters.AddWithValue("@AuthorId", Session["AuthorId"]);
             SqlCommand.Parameters.AddWithValue("@ImagePath", "/public/" + filename);
             SqlCommand.Parameters.AddWithValue("@Date", DateTime.Now);
+            SqlCommand.Parameters.AddWithValue("@Excerpt", this.textboxExcerpt.Text);
 
             this.SqlConnection.Open();
             try
@@ -47,10 +48,11 @@ namespace Blog
                         if (ext == ".jpg" || ext == ".png")
                         {
                             fileUploadImage.PostedFile.SaveAs(path + filename);
-                            this.labelStatus.Text = "Article saved succesfully";
-                            this.clearForm();
                         }
                     }
+
+                    this.labelStatus.Text = "Article saved succesfully";
+                    this.clearForm();
                 }
             }
             catch (Exception exception)

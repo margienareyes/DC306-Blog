@@ -21,6 +21,10 @@
                           <asp:FileUpload runat="server" ID="fileUploadImage"></asp:FileUpload>
                         </div>
                         <div class="form-group">
+                          <label class="control-label mb-1">Excerpt</label>
+                          <asp:TextBox runat="server" ID="textboxExcerpt" class="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
                           <label class="control-label mb-1">Content</label>
                           <asp:TextBox runat="server" type="hidden"  ID="textboxContent" class="form-control"></asp:TextBox>
                           <trix-editor input="ContentPlaceHolder1_textboxContent"></trix-editor>
