@@ -60,6 +60,7 @@ namespace Blog
                     Session["AuthorUsername"] = this.SqlDataReader["Username"].ToString();
                     Session["AuthorName"] = this.SqlDataReader["Name"].ToString();
                     Session["AuthorEmail"] = this.SqlDataReader["Email"].ToString();
+                    Session["AuthorImage"] = this.SqlDataReader["ImagePath"].ToString();
                 }
             }
 

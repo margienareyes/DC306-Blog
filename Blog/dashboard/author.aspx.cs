@@ -42,7 +42,7 @@ namespace Blog
             {
 
                 string filename = fileUploadImage.FileName;
-                string path = Server.MapPath("public/authors");
+                string path = Server.MapPath("../public/authors");
 
                 conn = new SqlConnection(connStr);
                 cmd = new SqlCommand("insert into [Author] (Name, Email, Username, Password, ImagePath) values (@Name,@Email,@Username,@Password, @ImagePath)", conn);
@@ -50,7 +50,7 @@ namespace Blog
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-                cmd.Parameters.AddWithValue("@ImagePath", "../public/authors" + filename);
+                cmd.Parameters.AddWithValue("@ImagePath", "/public/authors" + filename);
 
                 conn.Open();
                 try
